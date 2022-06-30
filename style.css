@@ -171,6 +171,10 @@ button:hover {
         margin: 0 auto;
         margin-top: 2rem;
     }
+
+    body{
+        background-size: 200% 200%;
+    }
 }
 
 @media (max-width: 540px) {
