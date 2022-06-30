@@ -22,11 +22,24 @@ function respostaQuest01() {
     let selected = document.querySelector("input[name='quest']:checked"); //Váriavel para captar qual 'radio' está selecionado
 
     if (selected.value === "n") { //Fazendo a validação se o 'radio' selecionado tem o valor 'n' que corresponde a incorreto
-        alert("Resposta errada! Tente novamente."); 
+        let alert = document.getElementById("alert");
+        let audioError = document.getElementById("audioError");
+        audioError.play();
+        alert.classList.remove("invisible");
+        alert.classList.add("visible"); 
         
     } else if (selected.value === "s") { //Fazendo a validação se o 'radio' selecionado tem o valor 's' que corresponde a correto
         let pergunta01 = document.getElementById("pergunta-01"); //Até o final do bloco 'else if' são as trocas de classes para efetuar as animações e remover/colocar elementos na tela no tempo certo
         let pergunta02 = document.getElementById("pergunta-02");
+        let audioCorrect = document.getElementById("audioCorrect");
+        let alert = document.getElementById("alert");
+        let alertText = document.getElementById("alert-text");
+        audioCorrect.play();
+        alertText.innerHTML = "Resposta correta!";
+        alertText.classList.remove("alertError");
+        alertText.classList.add("alertCorrect");
+        alert.classList.remove("invisible");
+        alert.classList.add("visible")
         pergunta01.classList.add("fadeOut");
         setTimeout( function(){
             pergunta01.classList.add("invisible");
@@ -50,10 +63,24 @@ function respostaQuest02 (){
     let selected = document.querySelector("input[name='quest']:checked");
 
     if (selected.value === "n") {
-        alert("Resposta errada! Tente novamente.")
+        let alert = document.getElementById("alert");
+        let audioError = document.getElementById("audioError");
+        audioError.play();
+        alert.classList.remove("invisible");
+        alert.classList.add("visible"); 
+
     } else if  (selected.value === "s") {
         let pergunta02 = document.getElementById("pergunta-02");
         let pergunta03 = document.getElementById("pergunta-03");
+        let audioCorrect = document.getElementById("audioCorrect");
+        let alert = document.getElementById("alert");
+        let alertText = document.getElementById("alert-text");
+        audioCorrect.play();
+        alertText.innerHTML = "Resposta correta!";
+        alertText.classList.remove("alertError");
+        alertText.classList.add("alertCorrect");
+        alert.classList.remove("invisible");
+        alert.classList.add("visible")
         pergunta02.classList.add("fadeOut");
         setTimeout(function(){
             pergunta02.classList.add("invisible");
@@ -75,10 +102,25 @@ function respostaQuest03 (){
     let selected = document.querySelector("input[name='quest']:checked");
 
     if (selected.value === "n") {
-        alert("Resposta errada! Tente novamente.")
+        let alert = document.getElementById("alert");
+        let audioError = document.getElementById("audioError");
+        audioError.play();
+        alert.classList.remove("invisible");
+        alert.classList.add("visible"); 
+
     } else if  (selected.value === "s") {
         let pergunta03 = document.getElementById("pergunta-03");
         let fim = document.getElementById("fim");
+        let audioCorrect = document.getElementById("audioCorrect");
+        let alert = document.getElementById("alert");
+        let alertText = document.getElementById("alert-text");
+        let congratulations = document.getElementById("congratulations");
+        audioCorrect.play();
+        alertText.innerHTML = "Resposta correta!";
+        alertText.classList.remove("alertError");
+        alertText.classList.add("alertCorrect");
+        alert.classList.remove("invisible");
+        alert.classList.add("visible")
         pergunta03.classList.add("fadeOut");
         setTimeout(function(){
             pergunta03.classList.add("invisible");
@@ -87,6 +129,7 @@ function respostaQuest03 (){
         },1400);
 
         setTimeout(function(){
+            congratulations.play();
             fim.classList.remove("invisible");
             fim.classList.add("visible");
             fim.classList.add("fadeIn");

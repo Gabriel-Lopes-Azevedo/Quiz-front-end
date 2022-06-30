@@ -19,6 +19,10 @@
             <h1>A linguagem HTML é uma linguagem de:</h1>
 
             <div class="input-container">
+
+                <div class="invisible alert-container" id="alert">
+                    <h1 class="alertError" id="alert-text">Resposta incorreta!</h1>
+                </div>
                 
                 <div class="option-container">
                     <input class="custom-radio" type="radio" name="quest" id="1" value="s">
@@ -35,6 +39,7 @@
                     <label for="3">Programação</label>
                 </div>
 
+
                 <div class="button-responsive"><button id="confirm-button" class="button-confirm" onclick="respostaQuest01()">Confirmar</button></div>
             </div>
             
@@ -44,6 +49,10 @@
             <h1>A linguagem CSS é uma linguagem de:</h1>
 
             <div class="input-container">
+
+                <div class="invisible alert-container" id="alert">
+                    <h1 class="alertError" id="alert-text">Resposta incorreta!</h1>
+                </div>
                 
                 <div class="option-container">
                     <input class="custom-radio" type="radio" name="quest" id="1" value="n">
@@ -67,8 +76,13 @@
         <div class="invisible" id="pergunta-03">
             <h1>A linguagem JavaScript é uma linguagem de:</h1>
 
+            
             <div class="input-container">
                 
+                <div class="invisible alert-container" id="alert">
+                    <h1 class="alertError" id="alert-text">Resposta incorreta!</h1>
+                </div>
+
                 <div class="option-container">
                     <input class="custom-radio" type="radio" name="quest" id="1" value="n">
                     <label for="1">Marcação de Hipertexto</label>
@@ -85,11 +99,15 @@
                 </div>
 
                 <button id="confirm-button" class="button-confirm" onclick="respostaQuest03()">Confirmar</button>
+
+                <audio src="sounds/acerto.mp3" id="audioCorrect"></audio>
+                <audio src="sounds/erro.mp3" id="audioError"></audio>
             </div>
         </div>
 
         <div class="invisible" id="fim">
             <h1 class="fim">Parabéns!!! Você ganhou o Quiz!</h1>
+            <audio src="sounds/congratulations.mp3" id="congratulations"></audio>
         </div>
     </div>
     <script src="script.js"></script>
