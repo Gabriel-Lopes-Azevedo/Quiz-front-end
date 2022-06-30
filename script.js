@@ -115,6 +115,7 @@ function respostaQuest03 (){
         let alert = document.getElementById("alert");
         let alertText = document.getElementById("alert-text");
         let congratulations = document.getElementById("congratulations");
+        let rickRoll = document.getElementById("rickroll")
         audioCorrect.play();
         alertText.innerHTML = "Resposta correta!";
         alertText.classList.remove("alertError");
@@ -130,8 +131,11 @@ function respostaQuest03 (){
 
         setTimeout(function(){
             congratulations.play();
+            rickRoll.classList.remove("invisible");
             fim.classList.remove("invisible");
+            rickRoll.classList.add("visible");
             fim.classList.add("visible");
+            rickRoll.classList.add("fadeIn");
             fim.classList.add("fadeIn");
         },1500);
     }
