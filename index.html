@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+
+        <div class="visible fadeIn menu" id="menu">
+            <h1>Quiz Front-end</h1>
+            <button class="start-button loopFocus" onclick="iniciarQuiz()">Clique aqui para começar</button>
+        </div>
+
+        <div class="invisible" id="pergunta-01">
+            <h1>A linguagem HTML é uma linguagem de:</h1>
+
+            <div class="input-container">
+                
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="1" value="s">
+                    <label for="1">Marcação de Hipertexto</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="2" value="n">
+                    <label for="2">Folha de estilo</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="3" value="n">
+                    <label for="3">Programação</label>
+                </div>
+
+                <button id="confirm-button" class="button-confirm" onclick="respostaQuest01()">Confirmar</button>
+            </div>
+            
+        </div>
+
+        <div class="invisible" id="pergunta-02">
+            <h1>A linguagem CSS é uma linguagem de:</h1>
+
+            <div class="input-container">
+                
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="1" value="n">
+                    <label for="1">Marcação de Hipertexto</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="2" value="s">
+                    <label for="2">Folha de estilo</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="3" value="n">
+                    <label for="3">Programação</label>
+                </div>
+
+                <button id="confirm-button" class="button-confirm" onclick="respostaQuest02()">Confirmar</button>
+            </div>
+        </div>
+
+        <div class="invisible" id="pergunta-03">
+            <h1>A linguagem JavaScript é uma linguagem de:</h1>
+
+            <div class="input-container">
+                
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="1" value="n">
+                    <label for="1">Marcação de Hipertexto</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="2" value="n">
+                    <label for="2">Folha de estilo</label>
+                </div>
+
+                <div class="option-container">
+                    <input class="custom-radio" type="radio" name="quest" id="3" value="s">
+                    <label for="3">Programação</label>
+                </div>
+
+                <button id="confirm-button" class="button-confirm" onclick="respostaQuest03()">Confirmar</button>
+            </div>
+        </div>
+
+        <div class="invisible" id="fim">
+            <h1 class="fim">Parabéns!!! Você ganhou o Quiz!</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

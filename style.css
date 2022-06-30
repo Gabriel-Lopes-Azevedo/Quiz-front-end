@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(310deg, #12c2e9, #c471ed, #f64f59);
+    background-size: 300% 300%;
+    animation: backgroundAnimate 20s ease infinite;
+}
+
+.quiz-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.274);
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+input {
+    margin-right: 0.3rem;
+}
+
+label {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.274);
+    font-size: 1.2rem;
+    padding-left: 0.4rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.301);
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #000;
+    transition: all 1s;
+}
+
+.button-confirm {
+    margin-top: 3rem;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.custom-radio {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.corret {
+    color: green;
+}
+
+.incorret {
+    color: red;
+}
+
+.fadeIn {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.fadeInQuest {
+    animation: fadeInQuest 1.5s ease-out forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 1.5s ease-in forwards;
+}
+
+.loopFocus {
+    animation: loopFocus 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+    99% {
+        opacity: 0%;
+        transform: translateY(100px);
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes loopFocus {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.08);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes backgroundAnimate{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+
